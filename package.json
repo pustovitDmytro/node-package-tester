@@ -1,15 +1,16 @@
 {
-  "name": "npm-boilerplate",
+  "name": "node-package-tester",
   "version": "0.0.1",
-  "description": "boilerplate for creating npm packages",
+  "description": "tool for testing npm packages",
   "main": "./lib",
   "scripts": {
-    "prepare": "babel src --out-dir ./lib --copy-files && husky install",
+    "prepare": "npm run build:src && husky install",
+    "build:src": "babel src --out-dir ./lib --copy-files",
     "coveralls": "cat ./reports/coverage/lcov.info | coveralls",
     "test:security": "npm audit && npm run test:lock",
     "test:lint": "eslint src bin tests",
     "test:mocha": "mocha  --config .mocharc.json 'tests/**/*test.js'",
-    "test:package": "./bin/test-package.sh",
+    "test:package": "npm run build:src && ./lib/bin/npt.js test -c .package-tester.json",
     "test:coverage": "BUILD=0 MODE=test nyc mocha --config .mocharc.json 'tests/**/*test.js'",
     "test:debt": "jscpd src --config .jscpd.json",
     "test:lock": "lockfile-lint --path package-lock.json --validate-https --allowed-hosts npm",
@@ -18,19 +19,22 @@
     "sort-deps": "npm remove --save example; npm remove --save-dev example",
     "semantic-release": "npx semantic-release"
   },
+  "bin": {
+    "npt": "lib/bin/npt.js"
+  },
   "repository": {
     "type": "git",
-    "url": "https://github.com/pustovitDmytro/npm-boilerplate.git"
+    "url": "https://github.com/pustovitDmytro/node-package-tester.git"
   },
   "author": "Dmytro Pustovit",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/pustovitDmytro/npm-boilerplate/issues"
+    "url": "https://github.com/pustovitDmytro/node-package-tester/issues"
   },
   "engines": {
     "node": ">=10"
   },
-  "homepage": "https://github.com/pustovitDmytro/npm-boilerplate#readme",
+  "homepage": "https://github.com/pustovitDmytro/node-package-tester#readme",
   "devDependencies": {
     "@babel/cli": "^7.2.3",
     "@babel/core": "^7.3.4",
@@ -44,11 +48,6 @@
     "@babel/runtime": "^7.3.4",
     "@commitlint/cli": "^12.1.1",
     "@commitlint/lint": "^12.1.1",
-    "@rollup/plugin-babel": "^5.3.0",
-    "@rollup/plugin-commonjs": "^19.0.0",
-    "@rollup/plugin-json": "^4.1.0",
-    "@rollup/plugin-multi-entry": "^4.0.0",
-    "@rollup/plugin-node-resolve": "^13.0.0",
     "@semantic-release/changelog": "^5.0.0",
     "@semantic-release/commit-analyzer": "^8.0.0",
     "@semantic-release/git": "^9.0.0",
@@ -56,6 +55,7 @@
     "@semantic-release/npm": "^7.0.0",
     "@semantic-release/release-notes-generator": "^9.0.0",
     "babel-plugin-module-resolver": "^4.0.0",
+    "babel-plugin-shebang": "^1.0.0",
     "chai": "^4.2.0",
     "chance": "^1.0.18",
     "conventional-changelog-eslint": "^3.0.1",
@@ -75,16 +75,24 @@
     "eslint-plugin-security": "^1.4.0",
     "eslint-plugin-sonarjs": "^0.7.0",
     "eslint-plugin-unicorn": "^33.0.0",
-    "fs-extra": "^10.0.0",
     "husky": "^6.0.0",
     "jscpd": "^3.3.25",
     "lockfile-lint": "^4.6.2",
     "mocha": "^8.0.0",
     "mocha-junit-reporter": "^2.0.0",
     "nyc": "^15.0.0",
-    "rollup": "^2.45.2",
     "semantic-release": "^17.4.2",
     "semantic-release-telegram": "^1.2.0",
     "uuid": "^8.0.0"
+  },
+  "dependencies": {
+    "@rollup/plugin-babel": "^5.3.0",
+    "@rollup/plugin-commonjs": "^19.0.0",
+    "@rollup/plugin-json": "^4.1.0",
+    "@rollup/plugin-multi-entry": "^4.0.0",
+    "@rollup/plugin-node-resolve": "^13.0.0",
+    "docopt": "^0.6.2",
+    "fs-extra": "^10.0.0",
+    "rollup": "^2.45.2"
   }
 }

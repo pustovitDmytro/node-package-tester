@@ -1,1 +1,131 @@
-export default {};
+
+import path from 'path';
+import { exec } from 'child_process';
+import { promisify } from 'util';
+import { rollup } from 'rollup';
+import commonjs from '@rollup/plugin-commonjs';
+import resolve from '@rollup/plugin-node-resolve';
+import json from '@rollup/plugin-json';
+import multi from '@rollup/plugin-multi-entry';
+import babel from '@rollup/plugin-babel';
+import fs from 'fs-extra';
+
+const execAsync = promisify(exec);
+
+export default class Packer {
+    constructor({ dir, copy = [], modules = [] } = {}) {
+        const packageJSONPath = path.resolve(process.cwd(), 'package.json');
+
+        if (!dir) throw new Error("'dir' option is required");
+        this.dir = path.resolve(dir);
+
+        this.copy = copy;
+        this.modules = modules;
+        this.modules.push('mocha');
+
+        this.ready = this._init(packageJSONPath);
+    }
+
+    async _init(packageJSONPath) {
+        await this.cleanup();
+        [ this.packageInfo ] = await Promise.all([
+            fs.readJSON(packageJSONPath),
+            fs.ensureDir(this.dir)
+        ]);
+    }
+
+    async cleanup() {
+        await fs.remove(this.dir);
+    }
+
+    async packModule() {
+        const { stdout } = await execAsync('npm pack --json');
+        const [ data ] = JSON.parse(stdout);
+
+        this.tarPath = path.join(this.dir, data.filename);
+        await fs.move(
+            path.join(process.cwd(), data.filename),
+            this.tarPath
+        );
+    }
+
+    async prepare() {
+        const nodeModulesPath = [ 'node_modules', this.packageInfo.name, 'lib' ];
+        const devDependencies = this.packageInfo.peerDependencies || {};
+
+        for (const dep of this.modules) {
+            devDependencies[dep] = this.packageInfo.devDependencies[dep];
+        }
+
+        devDependencies['mocha-legacy'] = 'npm:mocha@^6.0.0';
+
+        const unixEntry = path.posix.join(...nodeModulesPath);
+        const winEntry = path.win32.join(...nodeModulesPath);
+
+        const mochaLegacyPath = './node_modules/mocha-legacy/bin/mocha';
+        const mochaLegacyUnix = path.posix.normalize(mochaLegacyPath);
+        const mochaLegacyWin = path.win32.normalize(mochaLegacyPath);
+
+        const testConfig = {
+            'name'    : `${this.packageInfo.name}-tests`,
+            'version' : this.packageInfo.version,
+            'scripts' : {
+                'test-win'  : `set ENTRY=${winEntry}&& mocha --config .mocharc.json tests.js`,
+                'test-unix' : `ENTRY="${unixEntry}" mocha --config .mocharc.json tests.js`,
+
+                'test-win:legacy'  : `set ENTRY=${winEntry}&& ${mochaLegacyUnix} --config .mocharc.json tests.js`,
+                'test-unix:legacy' : `ENTRY="${unixEntry}" ${mochaLegacyWin} --config .mocharc.json tests.js`
+            },
+            'dependencies' : {
+                [this.packageInfo.name] : this.tarPath
+            },
+            devDependencies
+        };
+
+        await fs.writeJSON(path.resolve(this.dir, 'package.json'), testConfig);
+
+        await Promise.all(this.copy.map(async ([ from, to ]) => {
+            const fromPath = path.join(process.cwd(), from);
+
+            if (await fs.exists(fromPath)) {
+                await fs.copy(
+                    path.join(fromPath),
+                    path.resolve(this.dir, to)
+                );
+            }
+        }));
+    }
+
+    async packTests() {
+        const resolveIgnoreRegexp = `^(?!${this.modules.join('|')}).*$`;
+
+        const bundle = await rollup({
+            input   : 'tests/**/*test.js',
+            plugins : [
+                babel({
+                    exclude      : 'node_modules/**',
+                    babelHelpers : 'inline'
+                }),
+                resolve({
+                    preferBuiltins : true,
+                    // eslint-disable-next-line security/detect-non-literal-regexp
+                    resolveOnly    : [ new RegExp(resolveIgnoreRegexp) ]
+                }),
+                commonjs({
+                    include               : [ /node_modules/ ],
+                    sourceMap             : false,
+                    ignoreDynamicRequires : true
+                }),
+                json({
+                    compact : true
+                }),
+                multi()
+            ]
+        });
+
+        await bundle.write({
+            file   : path.resolve(this.dir, 'tests.js'),
+            format : 'cjs'
+        });
+    }
+}

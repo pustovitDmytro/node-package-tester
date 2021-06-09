@@ -1,5 +1,5 @@
-# npm-boilerplate
-Boilerplate for creating npm packages.
+# node-package-tester
+tool for testing npm packages.
 
 [![Version][badge-vers]][npm]
 [![Bundle size][npm-size-badge]][npm-size-url]
@@ -41,57 +41,57 @@ Package is [continuously tested][appveyor-url] on darwin, linux, win32 platforms
 To install the library run the following command
 
 ```bash
-  npm i --save npm-boilerplate
+  npm i --save-dev node-package-tester
 ```
 
 ## Usage
 
-```javascript
-
+```bash
+  npt.js test -c .package-tester.json
 ```
 
 ## Contribute
 
 Make the changes to the code and tests. Then commit to your branch. Be sure to follow the commit message conventions. Read [Contributing Guidelines](.github/CONTRIBUTING.md) for details.
 
-[npm]: https://www.npmjs.com/package/npm-boilerplate
-[github]: https://github.com/pustovitDmytro/npm-boilerplate
-[coveralls]: https://coveralls.io/github/pustovitDmytro/npm-boilerplate?branch=master
-[badge-deps]: https://img.shields.io/david/pustovitDmytro/npm-boilerplate.svg
-[badge-vuln]: https://img.shields.io/snyk/vulnerabilities/npm/npm-boilerplate.svg?style=popout
-[badge-vers]: https://img.shields.io/npm/v/npm-boilerplate.svg
-[badge-lic]: https://img.shields.io/github/license/pustovitDmytro/npm-boilerplate.svg
-[badge-coverage]: https://coveralls.io/repos/github/pustovitDmytro/npm-boilerplate/badge.svg?branch=master
-[url-coverage]: https://coveralls.io/github/pustovitDmytro/npm-boilerplate?branch=master
+[npm]: https://www.npmjs.com/package/node-package-tester
+[github]: https://github.com/pustovitDmytro/node-package-tester
+[coveralls]: https://coveralls.io/github/pustovitDmytro/node-package-tester?branch=master
+[badge-deps]: https://img.shields.io/david/pustovitDmytro/node-package-tester.svg
+[badge-vuln]: https://img.shields.io/snyk/vulnerabilities/npm/node-package-tester.svg?style=popout
+[badge-vers]: https://img.shields.io/npm/v/node-package-tester.svg
+[badge-lic]: https://img.shields.io/github/license/pustovitDmytro/node-package-tester.svg
+[badge-coverage]: https://coveralls.io/repos/github/pustovitDmytro/node-package-tester/badge.svg?branch=master
+[url-coverage]: https://coveralls.io/github/pustovitDmytro/node-package-tester?branch=master
 
-[tests-badge]: https://img.shields.io/circleci/build/github/pustovitDmytro/npm-boilerplate
-[tests-url]: https://app.circleci.com/pipelines/github/pustovitDmytro/npm-boilerplate
+[tests-badge]: https://img.shields.io/circleci/build/github/pustovitDmytro/node-package-tester
+[tests-url]: https://app.circleci.com/pipelines/github/pustovitDmytro/node-package-tester
 
-[codefactor-badge]: https://www.codefactor.io/repository/github/pustovitdmytro/npm-boilerplate/badge
-[codefactor-url]: https://www.codefactor.io/repository/github/pustovitdmytro/npm-boilerplate
+[codefactor-badge]: https://www.codefactor.io/repository/github/pustovitdmytro/node-package-tester/badge
+[codefactor-url]: https://www.codefactor.io/repository/github/pustovitdmytro/node-package-tester
 
-[commit-activity-badge]: https://img.shields.io/github/commit-activity/m/pustovitDmytro/npm-boilerplate
+[commit-activity-badge]: https://img.shields.io/github/commit-activity/m/pustovitDmytro/node-package-tester
 
-[scrutinizer-badge]: https://scrutinizer-ci.com/g/pustovitDmytro/npm-boilerplate/badges/quality-score.png?b=master
-[scrutinizer-url]: https://scrutinizer-ci.com/g/pustovitDmytro/npm-boilerplate/?branch=master
+[scrutinizer-badge]: https://scrutinizer-ci.com/g/pustovitDmytro/node-package-tester/badges/quality-score.png?b=master
+[scrutinizer-url]: https://scrutinizer-ci.com/g/pustovitDmytro/node-package-tester/?branch=master
 
-[lgtm-lg-badge]: https://img.shields.io/lgtm/grade/javascript/g/pustovitDmytro/npm-boilerplate.svg?logo=lgtm&logoWidth=18
-[lgtm-lg-url]: https://lgtm.com/projects/g/pustovitDmytro/npm-boilerplate/context:javascript
+[lgtm-lg-badge]: https://img.shields.io/lgtm/grade/javascript/g/pustovitDmytro/node-package-tester.svg?logo=lgtm&logoWidth=18
+[lgtm-lg-url]: https://lgtm.com/projects/g/pustovitDmytro/node-package-tester/context:javascript
 
-[lgtm-alerts-badge]: https://img.shields.io/lgtm/alerts/g/pustovitDmytro/npm-boilerplate.svg?logo=lgtm&logoWidth=18
-[lgtm-alerts-url]: https://lgtm.com/projects/g/pustovitDmytro/npm-boilerplate/alerts/
+[lgtm-alerts-badge]: https://img.shields.io/lgtm/alerts/g/pustovitDmytro/node-package-tester.svg?logo=lgtm&logoWidth=18
+[lgtm-alerts-url]: https://lgtm.com/projects/g/pustovitDmytro/node-package-tester/alerts/
 
-[codacy-badge]: https://app.codacy.com/project/badge/Grade/8667aa23afaa4725854f098c4b5e8890
-[codacy-url]: https://www.codacy.com/gh/pustovitDmytro/npm-boilerplate/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=pustovitDmytro/npm-boilerplate&amp;utm_campaign=Badge_Grade
+[codacy-badge]: https://app.codacy.com/project/badge/Grade/6cfb66cf7c5543a1a5beb8c54ae46043
+[codacy-url]: https://www.codacy.com/gh/pustovitDmytro/node-package-tester/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=pustovitDmytro/node-package-tester&amp;utm_campaign=Badge_Grade
 
-[sonarcloud-badge]: https://sonarcloud.io/api/project_badges/measure?project=pustovitDmytro_npm-boilerplate&metric=alert_status
-[sonarcloud-url]: https://sonarcloud.io/dashboard?id=pustovitDmytro_npm-boilerplate
+[sonarcloud-badge]: https://sonarcloud.io/api/project_badges/measure?project=pustovitDmytro_node-package-tester&metric=alert_status
+[sonarcloud-url]: https://sonarcloud.io/dashboard?id=pustovitDmytro_node-package-tester
 
-[npm-downloads-badge]: https://img.shields.io/npm/dw/npm-boilerplate
-[npm-size-badge]: https://img.shields.io/bundlephobia/min/npm-boilerplate
-[npm-size-url]: https://bundlephobia.com/result?p=npm-boilerplate
+[npm-downloads-badge]: https://img.shields.io/npm/dw/node-package-tester
+[npm-size-badge]: https://img.shields.io/bundlephobia/min/node-package-tester
+[npm-size-url]: https://bundlephobia.com/result?p=node-package-tester
 
-[appveyor-badge]: https://ci.appveyor.com/api/projects/status/lik73h3vxd7687pr/branch/master?svg=true
-[appveyor-url]: https://ci.appveyor.com/project/pustovitDmytro/npm-boilerplate/branch/master
+[appveyor-badge]: https://ci.appveyor.com/api/projects/status/cvwovftl2hhvpo0r/branch/master?svg=true
+[appveyor-url]: https://ci.appveyor.com/project/pustovitDmytro/node-package-tester/branch/master
 
 

@@ -10,6 +10,12 @@ export default class Test {
         await fse.ensureDir(tmpFolder);
     }
 
+    async setPacker(Packer) {
+        this.packer = new Packer();
+
+        return this.packer;
+    }
+
     async cleanTmpFolder() {
         await fse.remove(tmpFolder);
     }

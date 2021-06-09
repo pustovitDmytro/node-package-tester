@@ -1,0 +1,7 @@
+{
+    "dir": "tmp/tests/1",
+    "copy": [
+        [ "tests/init.js",  "tests-init.js" ],
+        [ ".mocharc.bundle.json", ".mocharc.json" ]
+    ]
+}
