@@ -13,16 +13,24 @@ import fs from 'fs-extra';
 import packageInfo from '../package.json';
 
 const execAsync = promisify(exec);
+const rootDir = path.join(__dirname, '../');
 
 export default class Packer {
-    constructor({ dir, copy = [], modules = [] } = {}) {
+    constructor({ dir, copy = [], modules = [], copyDefaultFiles } = {}) {
         const packageJSONPath = path.resolve(process.cwd(), 'package.json');
 
         if (!dir) throw new Error("'dir' option is required");
         this.dir = path.resolve(dir);
 
         this.copy = copy;
-        this.copy.push([ path.join(__dirname, '../lib/bin/conditional-test.js'), 'conditional-test.js' ]);
+        this.copy.push([ path.join(rootDir, 'lib/bin/conditional-test.js'), 'conditional-test.js' ]);
+        if (copyDefaultFiles) {
+            this.copy.push(
+                [ path.join(rootDir, 'tests/init.js'),  'tests-init.js' ],
+                [ path.join(rootDir, '.mocharc.bundle.json'), '.mocharc.json' ]
+            );
+        }
+
         this.modules = modules;
         this.modules.push('mocha');
 
@@ -96,13 +104,12 @@ export default class Packer {
 
         await Promise.all(this.copy.map(async ([ from, to ]) => {
             const fromPath = path.resolve(process.cwd(), from);
+            const toPath = path.resolve(this.dir, to);
 
             if (await fs.exists(fromPath)) {
-                await fs.copy(
-                    fromPath,
-                    path.resolve(this.dir, to)
-                );
-            }
+                await fs.copy(fromPath, toPath);
+                console.log(`${fromPath} copied to ${toPath}`);
+            } else console.log(`${fromPath} not found`);
         }));
     }
 

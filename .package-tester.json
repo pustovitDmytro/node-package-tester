@@ -1,8 +1,7 @@
 {
     "dir": "tmp/package-tests",
+    "copyDefaultFiles": true,
     "copy": [
-        [ "tests/init.js",  "tests-init.js" ],
-        [ ".mocharc.bundle.json", ".mocharc.json" ],
         [ "tests/files/.default-config.json", "files/.default-config.json" ]
     ]
 }
