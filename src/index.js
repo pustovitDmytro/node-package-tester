@@ -82,7 +82,7 @@ export default class Packer {
                 'test-unix:legacy' : `ENTRY="${unixEntry}" ${mochaLegacyUnix} --config .mocharc.json tests.js`
             },
             'dependencies' : {
-                [this.packageInfo.name] : this.tarPath,
+                [this.packageInfo.name] : path.basename(this.tarPath),
                 semver                  : packageInfo.dependencies.semver
             },
             devDependencies,
