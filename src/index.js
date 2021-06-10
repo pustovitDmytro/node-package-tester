@@ -21,7 +21,6 @@ export default class Packer {
 
         if (!dir) throw new Error("'dir' option is required");
         this.dir = path.resolve(dir);
-
         this.copy = copy;
         this.copy.push([ path.join(rootDir, 'lib/bin/conditional-test.js'), 'conditional-test.js' ]);
         if (copyDefaultFiles) {
@@ -51,11 +50,11 @@ export default class Packer {
 
     async packModule() {
         const { stdout } = await execAsync('npm pack');
-        const filename = stdout.split(os.EOL).filter(i => i).pop();
+        const filename = stdout.split(os.EOL).filter(i => i).pop().trim();
 
         this.tarPath = path.join(this.dir, filename);
         await fs.move(
-            path.join(process.cwd(), filename),
+            path.resolve(process.cwd(), filename),
             this.tarPath
         );
     }
@@ -75,7 +74,7 @@ export default class Packer {
 
         const mochaLegacyPath = './node_modules/mocha-legacy/bin/mocha';
         const mochaLegacyUnix = path.posix.normalize(mochaLegacyPath);
-        const mochaLegacyWin = path.win32.normalize(mochaLegacyPath);
+        const mochaLegacyWin = path.win32.normalize(`${mochaLegacyPath}`);
 
         const testConfig = {
             'name'    : `${this.packageInfo.name}-tests`,
@@ -86,7 +85,7 @@ export default class Packer {
                 'test-win'  : `set ENTRY=${winEntry}&& mocha --config .mocharc.json tests.js`,
                 'test-unix' : `ENTRY="${unixEntry}" mocha --config .mocharc.json tests.js`,
 
-                'test-win:legacy'  : `set ENTRY=${winEntry}&& ${mochaLegacyWin} --config .mocharc.json tests.js`,
+                'test-win:legacy'  : `set ENTRY=${winEntry}&& node ${mochaLegacyWin} --config .mocharc.json tests.js`,
                 'test-unix:legacy' : `ENTRY="${unixEntry}" ${mochaLegacyUnix} --config .mocharc.json tests.js`
             },
             'dependencies' : {

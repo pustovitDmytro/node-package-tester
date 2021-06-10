@@ -23,17 +23,9 @@ const binPath = resolve('bin/npt.js');
 test('cli on default config', async function () {
     const configPath = path.join(testsRootFolder, 'files/.default-config.json');
 
-    try {
-        const res = await execAsync(`${binPath} pack -c "${configPath}"`);
+    await execAsync(`node ${binPath} pack -c "${configPath}"`);
 
-        console.log(res.stdout);
-    } catch (error) {
-        console.log(error.stdout);
-        console.error(error.stderr);
-        throw error;
-    }
-
-    assert.isTrue(await fs.exists(path.join(defaultConfig.dir, 'package.json')), 'package.json exists');
+    assert.isTrue(await fs.exists(path.resolve(defaultConfig.dir, 'package.json')), 'package.json exists');
 });
 
 after(async function () {
