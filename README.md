@@ -46,9 +46,45 @@ To install the library run the following command
 
 ## Usage
 
+```
+Usage:
+  npt.js pack --config=<config> 
+  npt.js test --config=<config>
+  npt.js -h | --help
+
+Options:
+  -h  --help                shows help
+  -c --config=<config>      config path
+```
+
+Example; 
+
 ```bash
   npt.js test -c .package-tester.json
 ```
+
+### Configuration
+
+Config sample
+
+```json
+{
+    "dir": "tmp/package-tests",
+    "copyDefaultFiles": true,
+    "copy": [
+        [ "tests/files/.default-config.json", "files/.default-config.json" ]
+    ]
+}
+```
+
+Config attribute description:
+
+| Option | Required | Type | Description | Default |
+|----|---|---|------------------------------------|------------------------------------|
+| `dir`  | yes | ```string``` | Path to target directory (will be created automatically) |      |
+| `copyDefaultFiles`    | no |  ```boolean```  | Copy default files. See [tests/init.js](tests/init.js) and [.mocharc.json](.mocharc.bundle.json)   | `false` |
+| `copy`    | no |  ```array```  | Files to copy into packed tests | `[]` |
+| `modules` | no |  ```array```  | Modules to copy into packed tests | `[]` |
 
 ## Contribute
 
