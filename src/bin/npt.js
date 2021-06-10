@@ -45,7 +45,8 @@ async function test({ config }) {
 }
 
 async function run(opts) {
-    const config = await fs.readJSON(opts['--config']);
+    const configPath = path.resolve(opts['--config']);
+    const config = await fs.readJSON(configPath);
 
     try {
         if (opts.pack) {

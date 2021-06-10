@@ -2,6 +2,7 @@
 import path from 'path';
 import { exec } from 'child_process';
 import { promisify } from 'util';
+import os from 'os';
 import { rollup } from 'rollup';
 import commonjs from '@rollup/plugin-commonjs';
 import resolve from '@rollup/plugin-node-resolve';
@@ -41,12 +42,12 @@ export default class Packer {
     }
 
     async packModule() {
-        const { stdout } = await execAsync('npm pack --json');
-        const [ data ] = JSON.parse(stdout);
+        const { stdout } = await execAsync('npm pack');
+        const filename = stdout.split(os.EOL).filter(i => i).pop();
 
-        this.tarPath = path.join(this.dir, data.filename);
+        this.tarPath = path.join(this.dir, filename);
         await fs.move(
-            path.join(process.cwd(), data.filename),
+            path.join(process.cwd(), filename),
             this.tarPath
         );
     }
