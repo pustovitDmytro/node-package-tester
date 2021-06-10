@@ -102,7 +102,7 @@ export default class Packer {
 
         await fs.writeJSON(path.resolve(this.dir, 'package.json'), testConfig);
 
-        await Promise.all(this.copy.map(async ([ from, to ]) => {
+        await Promise.all(this.copy.reverse().map(async ([ from, to ]) => {
             const fromPath = path.resolve(process.cwd(), from);
             const toPath = path.resolve(this.dir, to);
 
