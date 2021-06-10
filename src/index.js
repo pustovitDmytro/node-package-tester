@@ -9,6 +9,7 @@ import json from '@rollup/plugin-json';
 import multi from '@rollup/plugin-multi-entry';
 import babel from '@rollup/plugin-babel';
 import fs from 'fs-extra';
+import packageInfo from '../package.json';
 
 const execAsync = promisify(exec);
 
@@ -20,6 +21,7 @@ export default class Packer {
         this.dir = path.resolve(dir);
 
         this.copy = copy;
+        this.copy.push([ path.join(__dirname, '../lib/bin/conditional-test.js'), 'conditional-test.js' ]);
         this.modules = modules;
         this.modules.push('mocha');
 
@@ -70,26 +72,33 @@ export default class Packer {
             'name'    : `${this.packageInfo.name}-tests`,
             'version' : this.packageInfo.version,
             'scripts' : {
+                'test' : 'node conditional-test.js',
+
                 'test-win'  : `set ENTRY=${winEntry}&& mocha --config .mocharc.json tests.js`,
                 'test-unix' : `ENTRY="${unixEntry}" mocha --config .mocharc.json tests.js`,
 
-                'test-win:legacy'  : `set ENTRY=${winEntry}&& ${mochaLegacyUnix} --config .mocharc.json tests.js`,
-                'test-unix:legacy' : `ENTRY="${unixEntry}" ${mochaLegacyWin} --config .mocharc.json tests.js`
+                'test-win:legacy'  : `set ENTRY=${winEntry}&& ${mochaLegacyWin} --config .mocharc.json tests.js`,
+                'test-unix:legacy' : `ENTRY="${unixEntry}" ${mochaLegacyUnix} --config .mocharc.json tests.js`
             },
             'dependencies' : {
-                [this.packageInfo.name] : this.tarPath
+                [this.packageInfo.name] : this.tarPath,
+                semver                  : packageInfo.dependencies.semver
             },
-            devDependencies
+            devDependencies,
+            'node-package-tester' : {
+                'legacyNodeVersions' : '>=10 <12',
+                'nodeVersions'       : '>=12 <=16'
+            }
         };
 
         await fs.writeJSON(path.resolve(this.dir, 'package.json'), testConfig);
 
         await Promise.all(this.copy.map(async ([ from, to ]) => {
-            const fromPath = path.join(process.cwd(), from);
+            const fromPath = path.resolve(process.cwd(), from);
 
             if (await fs.exists(fromPath)) {
                 await fs.copy(
-                    path.join(fromPath),
+                    fromPath,
                     path.resolve(this.dir, to)
                 );
             }

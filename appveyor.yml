@@ -105,7 +105,7 @@ for:
       - sh: nvm use $nodejs_version
       - sh: npm config get user-agent
       - npm install
-      - ./bin/pack-tests.sh
+      - ./lib/bin/npt.js pack -c .package-tester.json
   -
     matrix:
       only:
@@ -140,7 +140,6 @@ for:
     build_script:      
       - 7z x package-tests.zip
       - cd package-tests
-      - npm i
+      - npm i --no-audit
     test_script:
-      - sh: npm run test
-      - cmd: npm run test-win
+      - npm run test

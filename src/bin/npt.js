@@ -34,7 +34,7 @@ async function test({ config }) {
 
     try {
         await execAsync('npm install --no-audit', { cwd });
-        const { stdout } = await execAsync('npm run test-unix', { cwd });
+        const { stdout } = await execAsync('npm run test', { cwd });
 
         console.log(stdout);
     } catch (error) {
