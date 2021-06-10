@@ -19,6 +19,7 @@
     "sort-deps": "npm remove --save example; npm remove --save-dev example",
     "semantic-release": "npx semantic-release"
   },
+  "keywords": ["tests", "nodejs", "npt", "testing", "version"],
   "bin": {
     "npt": "lib/bin/npt.js"
   },
