@@ -1,6 +1,6 @@
 {
   "name": "node-package-tester",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "tool for testing npm packages",
   "main": "./lib",
   "scripts": {
@@ -19,7 +19,13 @@
     "sort-deps": "npm remove --save example; npm remove --save-dev example",
     "semantic-release": "npx semantic-release"
   },
-  "keywords": ["tests", "nodejs", "npt", "testing", "version"],
+  "keywords": [
+    "tests",
+    "nodejs",
+    "npt",
+    "testing",
+    "version"
+  ],
   "bin": {
     "npt": "lib/bin/npt.js"
   },
