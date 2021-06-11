@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/pustovitDmytro/node-package-tester/compare/v1.0.0...v1.0.1) (2021-06-11)
+
+
+### Fix
+
+* adds copied files to npm ([71d63f6](https://github.com/pustovitDmytro/node-package-tester/commit/71d63f605d27a9c69eb0c8261c4f1b759c4eaed8))
+
 # 1.0.0 (2021-06-11)
 
 
