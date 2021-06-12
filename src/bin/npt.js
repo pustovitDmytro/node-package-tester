@@ -32,16 +32,10 @@ async function test({ config }) {
     await pack({ config });
     const cwd = path.resolve(config.dir);
 
-    try {
-        await execAsync('npm install --no-audit', { cwd });
-        const { stdout } = await execAsync('npm run test', { cwd });
+    await execAsync('npm install --no-audit', { cwd });
+    const { stdout } = await execAsync('npm run test', { cwd });
 
-        console.log(stdout);
-    } catch (error) {
-        console.log(error.stdout);
-        console.error(error.stderr);
-        throw error;
-    }
+    console.log(stdout);
 }
 
 async function run(opts) {

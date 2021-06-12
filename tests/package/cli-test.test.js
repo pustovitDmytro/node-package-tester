@@ -12,7 +12,7 @@ const execAsync = promisify(exec);
 
 const factory = new Test();
 
-suite('cli');
+suite('cli: test #no-pack');
 
 before(async function () {
     await factory.setTmpFolder();
@@ -20,10 +20,10 @@ before(async function () {
 
 const binPath = resolve('bin/npt.js');
 
-test('cli on default config', async function () {
+test('cli on default config ', async function () {
     const configPath = path.join(testsRootFolder, 'files/.default-config.json');
 
-    await execAsync(`node ${binPath} pack -c "${configPath}"`);
+    await execAsync(`node ${binPath} test -c "${configPath}"`);
 
     assert.isTrue(await fs.exists(path.resolve(defaultConfig.dir, 'package.json')), 'package.json exists');
 });
