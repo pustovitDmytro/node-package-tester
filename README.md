@@ -131,5 +131,5 @@ Make the changes to the code and tests. Then commit to your branch. Be sure to f
 [appveyor-badge]: https://ci.appveyor.com/api/projects/status/cvwovftl2hhvpo0r/branch/master?svg=true
 [appveyor-url]: https://ci.appveyor.com/project/pustovitDmytro/node-package-tester/branch/master
 
-[fossa-badge]: https://app.fossa.com/api/projects/custom%2B24828%2Fnpm-boilerplate.svg?type=shield
-[fossa-url]: https://app.fossa.com/projects/custom%2B24828%2Fnpm-boilerplate?ref=badge_shield
+[fossa-badge]: https://app.fossa.com/api/projects/custom%2B24828%2Fnode-package-tester.svg?type=shield
+[fossa-url]: https://app.fossa.com/projects/custom%2B24828%2Fnode-package-tester?ref=badge_shield
