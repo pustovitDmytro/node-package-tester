@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/pustovitDmytro/node-package-tester/compare/v1.1.0...v1.1.1) (2021-06-13)
+
+
+### Upgrade
+
+* Pin dependencies ([fc26b0f](https://github.com/pustovitDmytro/node-package-tester/commit/fc26b0f35169cc1aaf02100ec65a7ee2bdadc3a2))
+
 # [1.1.0](https://github.com/pustovitDmytro/node-package-tester/compare/v1.0.2...v1.1.0) (2021-06-13)
 
 
