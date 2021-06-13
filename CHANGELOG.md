@@ -1,3 +1,14 @@
+# [1.1.0](https://github.com/pustovitDmytro/node-package-tester/compare/v1.0.2...v1.1.0) (2021-06-13)
+
+
+### Chore
+
+* adds stabilityDays to renovate ([3b262bc](https://github.com/pustovitDmytro/node-package-tester/commit/3b262bcefc6db318d2a7d9103f9f5f42315202d5))
+
+### New
+
+* strict match for negate module resolving ([65090e6](https://github.com/pustovitDmytro/node-package-tester/commit/65090e64049943f1b1dc383e3edec5ff6817b778))
+
 ## [1.0.2](https://github.com/pustovitDmytro/node-package-tester/compare/v1.0.1...v1.0.2) (2021-06-12)
 
 
