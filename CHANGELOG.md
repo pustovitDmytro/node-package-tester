@@ -1,3 +1,23 @@
+## [1.0.2](https://github.com/pustovitDmytro/node-package-tester/compare/v1.0.1...v1.0.2) (2021-06-12)
+
+
+### Chore
+
+* fixes npm  audit ([c3beccd](https://github.com/pustovitDmytro/node-package-tester/commit/c3beccdf1926d72dcf9b13cd153e37916f1a8d13))
+* fixes package-lock ([85f410c](https://github.com/pustovitDmytro/node-package-tester/commit/85f410c82fcb36b873bc25387176a6a86cf6b94b))
+* integrate fossa ([b65e961](https://github.com/pustovitDmytro/node-package-tester/commit/b65e961a5ae500b1b5fd12fce3436e71c1518e35))
+* integrate node-package-tester ([9d53bf3](https://github.com/pustovitDmytro/node-package-tester/commit/9d53bf30d295368e7f1e925c18b00e48cc16014e))
+* Update dependency glob-parent to 5.1.2 [SECURITY] ([c957512](https://github.com/pustovitDmytro/node-package-tester/commit/c957512cf496d9b99e2278b44b6bb9da545f57a8))
+* Update dependency mocha to v9 ([93b7a17](https://github.com/pustovitDmytro/node-package-tester/commit/93b7a1783ea97a7bcd94d570ef33b61314c93746))
+
+### Docs
+
+* change fossa name ([c981681](https://github.com/pustovitDmytro/node-package-tester/commit/c981681ffaf220464a0567ecb963ae2f88b257a7))
+
+### Fix
+
+* return .mocharc.bundle.json and add coverage ([075de49](https://github.com/pustovitDmytro/node-package-tester/commit/075de4971e4e43628daa3c9fa4b30675d7f6c289))
+
 ## [1.0.1](https://github.com/pustovitDmytro/node-package-tester/compare/v1.0.0...v1.0.1) (2021-06-11)
 
 
