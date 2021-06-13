@@ -113,7 +113,7 @@ export default class Packer {
     }
 
     async packTests() {
-        const resolveIgnoreRegexp = `^(?!${this.modules.join('|')}).*$`;
+        const resolveIgnoreRegexp = `^(?!${this.modules.map(m => `^${m}$`).join('|')}).*$`;
 
         const bundle = await rollup({
             input   : 'tests/**/*test.js',
