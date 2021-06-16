@@ -1,3 +1,17 @@
+## [1.1.2](https://github.com/pustovitDmytro/node-package-tester/compare/v1.1.1...v1.1.2) (2021-06-16)
+
+
+### Chore
+
+* fix json in renovate ([8ad7928](https://github.com/pustovitDmytro/node-package-tester/commit/8ad792825b2703e3159b65faf722eb43a1d9d421))
+* fixes cli tests out of build (fixes #7) ([87ecd04](https://github.com/pustovitDmytro/node-package-tester/commit/87ecd046fe478e589f1c671e4b310b962397283f)), closes [#7](https://github.com/pustovitDmytro/node-package-tester/issues/7)
+* removes unused devDependencies ([ddb100a](https://github.com/pustovitDmytro/node-package-tester/commit/ddb100aa634ab2e1d2695de73d9aeb4a7795ccce))
+* Update dependency eslint-plugin-regexp to ^0.12.0 (#4) ([490f1db](https://github.com/pustovitDmytro/node-package-tester/commit/490f1db99516269f282fe954dd91273370b108e4)), closes [#4](https://github.com/pustovitDmytro/node-package-tester/issues/4)
+
+### Upgrade
+
+* Update dependency rollup to v2.52.0 (#5) ([50db6f2](https://github.com/pustovitDmytro/node-package-tester/commit/50db6f2a3fe6b6fbd42ace465104fe2c75acf610)), closes [#5](https://github.com/pustovitDmytro/node-package-tester/issues/5)
+
 ## [1.1.1](https://github.com/pustovitDmytro/node-package-tester/compare/v1.1.0...v1.1.1) (2021-06-13)
 
 
