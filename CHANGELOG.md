@@ -1,3 +1,17 @@
+## [1.1.3](https://github.com/pustovitDmytro/node-package-tester/compare/v1.1.2...v1.1.3) (2021-06-19)
+
+
+### Chore
+
+* (sonar) Refactor code to not use nested template literals ([9e610ac](https://github.com/pustovitDmytro/node-package-tester/commit/9e610ac846f7866462fd4f62ee6aafe4ea109144))
+* adds sonarcloud config ([c92973d](https://github.com/pustovitDmytro/node-package-tester/commit/c92973d998ecee059594fbcdd35b9be0c08ffd0b))
+* maintain lock file ([7d9b876](https://github.com/pustovitDmytro/node-package-tester/commit/7d9b876b44f2c8693175ca5aa1bdd99ca7899709))
+* Update dependency eslint-plugin-regexp to ^0.12.0 ([51ff304](https://github.com/pustovitDmytro/node-package-tester/commit/51ff3049b892e9ee5655761e53454e4c601fba27))
+
+### Upgrade
+
+* Update dependency @babel/core to v7.14.6 ([dd8e78f](https://github.com/pustovitDmytro/node-package-tester/commit/dd8e78fff96820850f47796f888df8dd2b3fcfc6))
+
 ## [1.1.2](https://github.com/pustovitDmytro/node-package-tester/compare/v1.1.1...v1.1.2) (2021-06-16)
 
 
