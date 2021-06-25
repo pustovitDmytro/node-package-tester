@@ -21,6 +21,7 @@ before(async function () {
 const binPath = resolve('bin/npt.js');
 
 test('cli on default config ', async function () {
+    this.timeout(60 * 1000);
     const configPath = path.join(testsRootFolder, 'files/.default-config.json');
 
     await execAsync(`${binPath} test -c "${configPath}"`, { shell: true });
