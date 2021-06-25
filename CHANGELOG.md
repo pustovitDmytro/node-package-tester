@@ -1,3 +1,15 @@
+## [1.1.4](https://github.com/pustovitDmytro/node-package-tester/compare/v1.1.3...v1.1.4) (2021-06-25)
+
+
+### Chore
+
+* increase timeout for 'bin/npt.js test' command in tests ([d917076](https://github.com/pustovitDmytro/node-package-tester/commit/d917076facbcb0914314ee1bf8f3d45fead2feda))
+
+### Upgrade
+
+* Update dependency rollup to v2.52.1 (#9) ([29b6110](https://github.com/pustovitDmytro/node-package-tester/commit/29b6110198ceae7704ce081a806ce6f969e60cca)), closes [#9](https://github.com/pustovitDmytro/node-package-tester/issues/9)
+* Update dependency rollup to v2.52.2 (#10) ([d938098](https://github.com/pustovitDmytro/node-package-tester/commit/d9380985588cc4af59b61822e042defca310cdd1)), closes [#10](https://github.com/pustovitDmytro/node-package-tester/issues/10)
+
 ## [1.1.3](https://github.com/pustovitDmytro/node-package-tester/compare/v1.1.2...v1.1.3) (2021-06-19)
 
 
