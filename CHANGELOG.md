@@ -1,3 +1,16 @@
+## [1.1.6](https://github.com/pustovitDmytro/node-package-tester/compare/v1.1.5...v1.1.6) (2021-07-05)
+
+
+### Chore
+
+* Update dependency eslint-plugin-regexp to ^0.13.0 ([754142c](https://github.com/pustovitDmytro/node-package-tester/commit/754142ca35f931bc3772e07c2f959fc243bbafd4))
+* Update dependency eslint-plugin-unicorn to v34 (#12) ([e97f6d3](https://github.com/pustovitDmytro/node-package-tester/commit/e97f6d38f284a6dff2df8ec00d400bb32ea9368a)), closes [#12](https://github.com/pustovitDmytro/node-package-tester/issues/12)
+* Update dependency husky to v7 ([34098c3](https://github.com/pustovitDmytro/node-package-tester/commit/34098c31f085c90f5e4fcec3f08b3b4de8f22280))
+
+### Upgrade
+
+* Update dependency rollup to v2.52.7 ([f0df6d5](https://github.com/pustovitDmytro/node-package-tester/commit/f0df6d5c2020087e7107737783720525e6283664))
+
 ## [1.1.5](https://github.com/pustovitDmytro/node-package-tester/compare/v1.1.4...v1.1.5) (2021-06-28)
 
 
