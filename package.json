@@ -102,7 +102,7 @@
     "@rollup/plugin-node-resolve": "13.0.0",
     "docopt": "0.6.2",
     "fs-extra": "10.0.0",
-    "rollup": "2.52.7",
+    "rollup": "2.53.1",
     "semver": "7.3.5"
   }
 }
