@@ -1,3 +1,14 @@
+## [1.1.7](https://github.com/pustovitDmytro/node-package-tester/compare/v1.1.6...v1.1.7) (2021-07-14)
+
+
+### Chore
+
+* Update dependency eslint-plugin-sonarjs to ^0.9.0 ([8c6929f](https://github.com/pustovitDmytro/node-package-tester/commit/8c6929f3dbf30abc3de05e9b11e4f4a19f15166e))
+
+### Upgrade
+
+* Update dependency rollup to v2.53.1 ([1422ff6](https://github.com/pustovitDmytro/node-package-tester/commit/1422ff60e1c5bbaef7c12f3cc6790d48ad429ebe))
+
 ## [1.1.6](https://github.com/pustovitDmytro/node-package-tester/compare/v1.1.5...v1.1.6) (2021-07-05)
 
 
