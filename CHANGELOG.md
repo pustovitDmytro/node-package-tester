@@ -1,3 +1,10 @@
+## [1.1.10](https://github.com/pustovitDmytro/node-package-tester/compare/v1.1.9...v1.1.10) (2021-07-19)
+
+
+### Upgrade
+
+* Update dependency @rollup/plugin-node-resolve to v13.0.2 ([004e508](https://github.com/pustovitDmytro/node-package-tester/commit/004e5084312fdbcdce5a141c688674e80a092867))
+
 ## [1.1.9](https://github.com/pustovitDmytro/node-package-tester/compare/v1.1.8...v1.1.9) (2021-07-18)
 
 
