@@ -1,3 +1,10 @@
+## [1.1.11](https://github.com/pustovitDmytro/node-package-tester/compare/v1.1.10...v1.1.11) (2021-07-24)
+
+
+### Upgrade
+
+* Update dependency rollup to v2.53.3 ([efc35f8](https://github.com/pustovitDmytro/node-package-tester/commit/efc35f8fe7210769fe45faa9036ec1ce49cd0c68))
+
 ## [1.1.10](https://github.com/pustovitDmytro/node-package-tester/compare/v1.1.9...v1.1.10) (2021-07-19)
 
 
