@@ -1,3 +1,10 @@
+## [1.1.13](https://github.com/pustovitDmytro/node-package-tester/compare/v1.1.12...v1.1.13) (2021-07-24)
+
+
+### Upgrade
+
+* Update dependency @babel/core to v7.14.8 ([7f63825](https://github.com/pustovitDmytro/node-package-tester/commit/7f63825ed7749c3ac14e3446c988f0794f6a0260))
+
 ## [1.1.12](https://github.com/pustovitDmytro/node-package-tester/compare/v1.1.11...v1.1.12) (2021-07-24)
 
 
