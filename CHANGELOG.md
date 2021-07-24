@@ -1,3 +1,28 @@
+## [1.1.12](https://github.com/pustovitDmytro/node-package-tester/compare/v1.1.11...v1.1.12) (2021-07-24)
+
+
+### Chore
+
+* adds 'typo' PR template ([e20404d](https://github.com/pustovitDmytro/node-package-tester/commit/e20404d5f844e87f38558d6986e31df4c214fc3f))
+* adds bump strategy for devDependencies (non-major) ([03c9587](https://github.com/pustovitDmytro/node-package-tester/commit/03c958728c482d04225d3368aebae8fadc7d6a4d))
+* adds CODE_OF_CONDUCT ([a969a8d](https://github.com/pustovitDmytro/node-package-tester/commit/a969a8d7c4b9ea8552ef90d21d1cbef068c9ee4c))
+* combine mine packages in renovate updates ([54c97b8](https://github.com/pustovitDmytro/node-package-tester/commit/54c97b8debfe5eae07fe83947378d03eaaea5763))
+* create auto pr for major dependencies ([d2583a6](https://github.com/pustovitDmytro/node-package-tester/commit/d2583a6277808bbd2aa5ec69dbd1639c10458c9a))
+* enhance own updates commit messages ([49a2365](https://github.com/pustovitDmytro/node-package-tester/commit/49a2365c0a49363e42365503939b98819a6c1864))
+* fixes renovate config ([982abaf](https://github.com/pustovitDmytro/node-package-tester/commit/982abaf61a98de14dadc2fcb8b37b854577cbc64))
+* Lock file maintenance ([5d305a8](https://github.com/pustovitDmytro/node-package-tester/commit/5d305a8337cccbb1efcb4885805960941f40b143))
+* Lock file maintenance ([cdf4f11](https://github.com/pustovitDmytro/node-package-tester/commit/cdf4f112eebab895c624210cc672ab00ba2fa443))
+* Lock file maintenance (#24) ([39a4200](https://github.com/pustovitDmytro/node-package-tester/commit/39a4200637a88e107fa9c731d6403ab303e4daae)), closes [#24](https://github.com/pustovitDmytro/node-package-tester/issues/24)
+* not allow to fail on node 16 ([22ed683](https://github.com/pustovitDmytro/node-package-tester/commit/22ed683ace773b242382c094b363a1713f9d8352))
+* Update dependency eslint-plugin-regexp to ^0.13.0 (#36) ([3a8d3ec](https://github.com/pustovitDmytro/node-package-tester/commit/3a8d3ecefa7c49575b4c6de6832690117d852dd7)), closes [#36](https://github.com/pustovitDmytro/node-package-tester/issues/36)
+* Update dependency eslint-plugin-sonarjs to ^0.9.0 ([81d9681](https://github.com/pustovitDmytro/node-package-tester/commit/81d9681ef601c70ee83a7ca26b199d647fc4ca0e))
+* Update dependency eslint-plugin-unicorn to v34 (#34) ([86efbac](https://github.com/pustovitDmytro/node-package-tester/commit/86efbac96c6fbd1055c7e83fc3a42a861836b943)), closes [#34](https://github.com/pustovitDmytro/node-package-tester/issues/34)
+* Update dependency husky to v7 ([3578711](https://github.com/pustovitDmytro/node-package-tester/commit/35787117161955387aad52949d506c0fbaf42edf))
+
+### Docs
+
+* update snyk badge ([a7fbb1d](https://github.com/pustovitDmytro/node-package-tester/commit/a7fbb1d0e408bec8b8a8f37d1ffef3921d1dc106))
+
 ## [1.1.11](https://github.com/pustovitDmytro/node-package-tester/compare/v1.1.10...v1.1.11) (2021-07-24)
 
 
