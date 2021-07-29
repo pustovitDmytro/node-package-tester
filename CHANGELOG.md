@@ -1,3 +1,10 @@
+## [1.1.16](https://github.com/pustovitDmytro/node-package-tester/compare/v1.1.15...v1.1.16) (2021-07-29)
+
+
+### Upgrade
+
+* Update dependency @rollup/plugin-multi-entry to v4.1.0 ([3622ca9](https://github.com/pustovitDmytro/node-package-tester/commit/3622ca958c4a83301518387aa292fdce46f0cefe))
+
 ## [1.1.15](https://github.com/pustovitDmytro/node-package-tester/compare/v1.1.14...v1.1.15) (2021-07-29)
 
 
