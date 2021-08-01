@@ -1,3 +1,14 @@
+## [1.1.17](https://github.com/pustovitDmytro/node-package-tester/compare/v1.1.16...v1.1.17) (2021-08-01)
+
+
+### Chore
+
+* Update devDependencies (non-major) to v13 ([7e13f1d](https://github.com/pustovitDmytro/node-package-tester/commit/7e13f1da246d4024748f689f1fccfe0bd889655b))
+
+### Upgrade
+
+* Update dependency rollup to v2.55.1 (#29) ([df5880a](https://github.com/pustovitDmytro/node-package-tester/commit/df5880a14cb323fff1923a4ebed116328a70ee2c)), closes [#29](https://github.com/pustovitDmytro/node-package-tester/issues/29)
+
 ## [1.1.16](https://github.com/pustovitDmytro/node-package-tester/compare/v1.1.15...v1.1.16) (2021-07-29)
 
 
