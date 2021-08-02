@@ -1,3 +1,15 @@
+## [1.1.18](https://github.com/pustovitDmytro/node-package-tester/compare/v1.1.17...v1.1.18) (2021-08-02)
+
+
+### Chore
+
+* adds gitleaks to circle pipeline ([114946e](https://github.com/pustovitDmytro/node-package-tester/commit/114946e5b0a0ec0437929c5963e7efe258391b9e))
+* Update devDependencies (non-major) to v13 ([6894ad9](https://github.com/pustovitDmytro/node-package-tester/commit/6894ad97aeac91f931506c360822f81c861e2e83))
+
+### Upgrade
+
+* Update dependency @rollup/plugin-commonjs to v20 ([e546ad4](https://github.com/pustovitDmytro/node-package-tester/commit/e546ad4f866ba531afa1541fbf6b43d4c9a103e1))
+
 ## [1.1.17](https://github.com/pustovitDmytro/node-package-tester/compare/v1.1.16...v1.1.17) (2021-08-01)
 
 
