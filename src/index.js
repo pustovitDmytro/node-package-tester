@@ -8,7 +8,7 @@ import commonjs from '@rollup/plugin-commonjs';
 import resolve from '@rollup/plugin-node-resolve';
 import json from '@rollup/plugin-json';
 import multi from '@rollup/plugin-multi-entry';
-import babel from '@rollup/plugin-babel';
+import babelPlugin from '@rollup/plugin-babel';
 import fs from 'fs-extra';
 import packageInfo from '../package.json';
 
@@ -119,7 +119,7 @@ export default class Packer {
         const bundle = await rollup({
             input   : 'tests/**/*test.js',
             plugins : [
-                babel({
+                babelPlugin({
                     exclude      : 'node_modules/**',
                     babelHelpers : 'inline'
                 }),
