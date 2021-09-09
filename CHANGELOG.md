@@ -1,3 +1,27 @@
+## [1.1.22](https://github.com/pustovitDmytro/node-package-tester/compare/v1.1.21...v1.1.22) (2021-09-09)
+
+
+### Chore
+
+* adds  a security policy ([ed86aba](https://github.com/pustovitDmytro/node-package-tester/commit/ed86aba2326eab4d7ef6045913a06b8e80b73dce))
+* adds sponsorships ([35ed8e0](https://github.com/pustovitDmytro/node-package-tester/commit/35ed8e0ddac94bdc52545be1d533be48495c8d60))
+* fixes audit [devDependencies] ([d08b1fc](https://github.com/pustovitDmytro/node-package-tester/commit/d08b1fc075b7eef59c59f755e1ee96748824e415))
+* Lock file maintenance ([47bfacf](https://github.com/pustovitDmytro/node-package-tester/commit/47bfacf4e2ffe672c96345481ddfa6811d4d4d69))
+* Lock file maintenance ([19c2389](https://github.com/pustovitDmytro/node-package-tester/commit/19c23891056afb813e4dde92e7f40f0905896bc9))
+* Lock file maintenance ([2b00aec](https://github.com/pustovitDmytro/node-package-tester/commit/2b00aec84097bd21c51a43ab785225798753dbae))
+* Lock file maintenance ([dea06c9](https://github.com/pustovitDmytro/node-package-tester/commit/dea06c9d3e2dd4448e997ee081425b1a765fae87))
+* Lock file maintenance ([e0043d8](https://github.com/pustovitDmytro/node-package-tester/commit/e0043d89de5576939e701f567ab1a871c2c8a057))
+* Lock file maintenance (#34) ([081619d](https://github.com/pustovitDmytro/node-package-tester/commit/081619df7765e17404184ac33b5b629dfee388bc)), closes [#34](https://github.com/pustovitDmytro/node-package-tester/issues/34)
+* Lock file maintenance (#36) ([00ecb0f](https://github.com/pustovitDmytro/node-package-tester/commit/00ecb0f960dd496f1855f3b24700a205fb7af190)), closes [#36](https://github.com/pustovitDmytro/node-package-tester/issues/36)
+* Lock file maintenance (#37) ([11bf87c](https://github.com/pustovitDmytro/node-package-tester/commit/11bf87c0e9855ec9af2d0783cfd167b723fd2d2a)), closes [#37](https://github.com/pustovitDmytro/node-package-tester/issues/37)
+* Update devDependencies (non-major) ([51200bf](https://github.com/pustovitDmytro/node-package-tester/commit/51200bf4f3ac07c957f6861fd819319a28710689))
+* Update devDependencies (non-major) ([33211c3](https://github.com/pustovitDmytro/node-package-tester/commit/33211c31d168fc187eb028f92eaeeff48ccfd085))
+* Update devDependencies (non-major) (#48) ([b3f6184](https://github.com/pustovitDmytro/node-package-tester/commit/b3f6184966d64e7a20a5176ddca6c63d1e275520)), closes [#48](https://github.com/pustovitDmytro/node-package-tester/issues/48)
+
+### Upgrade
+
+* Update dependency rollup to v2.56.3 (#38) ([b14d52b](https://github.com/pustovitDmytro/node-package-tester/commit/b14d52b1f99582019ccdff3f8ce520d074ac0d0a)), closes [#38](https://github.com/pustovitDmytro/node-package-tester/issues/38)
+
 ## [1.1.21](https://github.com/pustovitDmytro/node-package-tester/compare/v1.1.20...v1.1.21) (2021-08-13)
 
 
