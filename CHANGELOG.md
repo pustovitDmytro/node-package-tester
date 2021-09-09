@@ -1,3 +1,14 @@
+## [1.1.23](https://github.com/pustovitDmytro/node-package-tester/compare/v1.1.22...v1.1.23) (2021-09-09)
+
+
+### Chore
+
+* Update devDependencies (non-major) (#39) ([3c75cd4](https://github.com/pustovitDmytro/node-package-tester/commit/3c75cd4cc1a72f7f79c52fb20b5e70ac3376928e)), closes [#39](https://github.com/pustovitDmytro/node-package-tester/issues/39)
+
+### Upgrade
+
+* Update dependency @babel/core to v7.15.5 ([9f5024c](https://github.com/pustovitDmytro/node-package-tester/commit/9f5024c962efd60941e1b3367b44797a600d2b43))
+
 ## [1.1.22](https://github.com/pustovitDmytro/node-package-tester/compare/v1.1.21...v1.1.22) (2021-09-09)
 
 
