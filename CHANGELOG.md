@@ -1,3 +1,19 @@
+## [1.1.24](https://github.com/pustovitDmytro/node-package-tester/compare/v1.1.23...v1.1.24) (2021-09-25)
+
+
+### Chore
+
+* Lock file maintenance ([95d03cf](https://github.com/pustovitDmytro/node-package-tester/commit/95d03cfb19614c3be9e12e0c2b8e5fa4f1f30d01))
+* Lock file maintenance ([8c284ed](https://github.com/pustovitDmytro/node-package-tester/commit/8c284ed189356d3fc7e3640f69bb269208f930a7))
+* Lock file maintenance ([0e34b05](https://github.com/pustovitDmytro/node-package-tester/commit/0e34b05d4125b059c931a6b1c05255f6b4e7d59f))
+* Lock file maintenance ([c49018b](https://github.com/pustovitDmytro/node-package-tester/commit/c49018be947a5ea26db23c804576cbdabe38108b))
+* Update dependency eslint-plugin-unicorn to v36 ([97e4698](https://github.com/pustovitDmytro/node-package-tester/commit/97e46988062b7f4d41dd769669897ae6bd5d67c9))
+
+### Upgrade
+
+* Update dependency @rollup/plugin-node-resolve to v13.0.5 ([73def02](https://github.com/pustovitDmytro/node-package-tester/commit/73def02859cc733e1e6e7cf7b4968a830222b24e))
+* Update dependency rollup to v2.57.0 (#47) ([5994c31](https://github.com/pustovitDmytro/node-package-tester/commit/5994c31c7922aa3f68f9a4969edb6ac769e789cd)), closes [#47](https://github.com/pustovitDmytro/node-package-tester/issues/47)
+
 ## [1.1.23](https://github.com/pustovitDmytro/node-package-tester/compare/v1.1.22...v1.1.23) (2021-09-09)
 
 
