@@ -1,3 +1,10 @@
+## [1.1.25](https://github.com/pustovitDmytro/node-package-tester/compare/v1.1.24...v1.1.25) (2021-10-05)
+
+
+### Upgrade
+
+* Update dependency @rollup/plugin-commonjs to v21 ([08fcbac](https://github.com/pustovitDmytro/node-package-tester/commit/08fcbacb694c23533847821d7c15f23ca1689c77))
+
 ## [1.1.24](https://github.com/pustovitDmytro/node-package-tester/compare/v1.1.23...v1.1.24) (2021-09-25)
 
 
