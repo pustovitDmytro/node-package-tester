@@ -103,7 +103,8 @@ Make the changes to the code and tests. Then commit to your branch. Be sure to f
 [npm]: https://www.npmjs.com/package/node-package-tester
 [github]: https://github.com/pustovitDmytro/node-package-tester
 [coveralls]: https://coveralls.io/github/pustovitDmytro/node-package-tester?branch=master
-[badge-deps]: https://img.shields.io/david/pustovitDmytro/node-package-tester.svg
+[badge-deps]: https://img.shields.io/librariesio/release/npm/node-package-tester.svg
+[badge-vuln]: https://img.shields.io/snyk/vulnerabilities/npm/node-package-tester.svg?style=popout
 [badge-vers]: https://img.shields.io/npm/v/node-package-tester.svg
 [badge-lic]: https://img.shields.io/github/license/pustovitDmytro/node-package-tester.svg
 [badge-coverage]: https://coveralls.io/repos/github/pustovitDmytro/node-package-tester/badge.svg?branch=master
