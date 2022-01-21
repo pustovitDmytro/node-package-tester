@@ -87,6 +87,15 @@ Config attribute description:
 | `copy`    | no |  ```array```  | Files to copy into packed tests | `[]` |
 | `modules` | no |  ```array```  | Modules to copy into packed tests | `[]` |
 
+### CI/CD
+
+Some common examples of ci/cd integration can be found in [examples folder](./examples/ci).
+
+For example, test npm package across darwin, linux, win32 platforms:
+
+ - [Appveyour](https://www.appveyor.com): Test all active and maintenance LTS node releases using the next [appveyor.yml](examples/ci/appveyor.yml)
+ - [GitHub Actions](https://github.com/features/actions): Test active and maintenance LTS node releases using the next [workflows.yml](examples/ci/npt.yml)
+
 ## Contribute
 
 Make the changes to the code and tests. Then commit to your branch. Be sure to follow the commit message conventions. Read [Contributing Guidelines](.github/CONTRIBUTING.md) for details.
