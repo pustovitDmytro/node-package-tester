@@ -1,3 +1,10 @@
+## [1.1.28](https://github.com/pustovitDmytro/node-package-tester/compare/v1.1.27...v1.1.28) (2022-01-22)
+
+
+### Docs
+
+* update year in license ([e2dec02](https://github.com/pustovitDmytro/node-package-tester/commit/e2dec024ae5885cd6c4a41d68b3a2ad910a2c7ea))
+
 ## [1.1.27](https://github.com/pustovitDmytro/node-package-tester/compare/v1.1.26...v1.1.27) (2022-01-22)
 
 
