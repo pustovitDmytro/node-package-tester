@@ -1,3 +1,10 @@
+## [1.1.27](https://github.com/pustovitDmytro/node-package-tester/compare/v1.1.26...v1.1.27) (2022-01-22)
+
+
+### Docs
+
+* update badges ([d0e824d](https://github.com/pustovitDmytro/node-package-tester/commit/d0e824dbd32d14a3abf8b0b06078a83091a39065))
+
 ## [1.1.26](https://github.com/pustovitDmytro/node-package-tester/compare/v1.1.25...v1.1.26) (2022-01-21)
 
 
