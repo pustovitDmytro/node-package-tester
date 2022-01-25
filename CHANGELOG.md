@@ -1,3 +1,16 @@
+## [1.1.29](https://github.com/pustovitDmytro/node-package-tester/compare/v1.1.28...v1.1.29) (2022-01-25)
+
+
+### Chore
+
+* fixes some npm audit vulnerabilities (#63) ([1787ce6](https://github.com/pustovitDmytro/node-package-tester/commit/1787ce6fff241875875212047592d38a270c3456)), closes [#63](https://github.com/pustovitDmytro/node-package-tester/issues/63)
+
+### Upgrade
+
+* Update dependency @rollup/plugin-commonjs to v21.0.1 (#64) ([f941ab3](https://github.com/pustovitDmytro/node-package-tester/commit/f941ab34ed5ce295729cd59865e2b79b127ee406)), closes [#64](https://github.com/pustovitDmytro/node-package-tester/issues/64)
+* Update dependency @rollup/plugin-node-resolve to v13.1.3 (#66) ([a2560a8](https://github.com/pustovitDmytro/node-package-tester/commit/a2560a88ef522942a4890c4ffaa6fc79acca8f5d)), closes [#66](https://github.com/pustovitDmytro/node-package-tester/issues/66)
+* Update dependency rollup to v2.66.0 (#50) ([55aae87](https://github.com/pustovitDmytro/node-package-tester/commit/55aae87402f922f94804c6ce19d0a898dd24fb2e)), closes [#50](https://github.com/pustovitDmytro/node-package-tester/issues/50)
+
 ## [1.1.28](https://github.com/pustovitDmytro/node-package-tester/compare/v1.1.27...v1.1.28) (2022-01-22)
 
 
