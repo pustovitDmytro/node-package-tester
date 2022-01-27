@@ -1,41 +1,29 @@
-#!./node_modules/.bin/babel-node
-/* eslint-disable censor/no-swear */
-
-import { spawn } from 'child_process';
+import { spawn, execSync } from 'child_process';
 import path from 'path';
-import semver from 'semver';
+import fs from 'fs-extra';
+import {
+    getTestCommand,
+    getPrepareCommands
+} from '../utils';
 
-const { platform, versions } = process;
-const nodeVersion = versions.node;
+async function main() {
+    const { platform, versions } = process;
 
-console.log(JSON.stringify({ platform, versions }));
-// eslint-disable-next-line security/detect-non-literal-require
-const packageJSON = require(path.join(process.cwd(), 'package.json'));
-const config = packageJSON['node-package-tester'];
+    console.log(JSON.stringify({ platform, versions }));
+    const packageJSON = await fs.readJSON(path.join(process.cwd(), 'package.json'));
+    const config = packageJSON['node-package-tester'];
+    const testCommand = getTestCommand(config, { platform, versions });
+    const prepareCommands = getPrepareCommands(config, { platform, versions });
 
-function getCommand() {
-    const isLegacyVersion = semver.satisfies(nodeVersion, config.legacyNodeVersions);
-    const isNodeVersion = semver.satisfies(nodeVersion, config.nodeVersions);
-    const isWin = platform === 'win32';
-
-    if (isLegacyVersion) {
-        if (isWin) return 'test-win:legacy';
-
-        return 'test-unix:legacy';
+    console.log('prepareCommands:', prepareCommands);
+    for (const prepareCommand of prepareCommands) {
+        execSync(prepareCommand);
     }
 
-    if (isNodeVersion) {
-        if (isWin) return 'test-win';
+    const childProcess = spawn('npm', [ 'run', testCommand ], { shell: true, stdio: 'inherit' });
 
-        return 'test-unix';
-    }
-
-    throw new Error(`Node ${nodeVersion} version not supported by ${JSON.stringify(config)}`);
+    childProcess.on('exit', (code) => process.exit(code));
 }
 
-const command = getCommand();
-
-const childProcess = spawn('npm', [ 'run', command ], { shell: true, stdio: 'inherit' });
-
-childProcess.on('exit', (code) => process.exit(code));
+main();
 

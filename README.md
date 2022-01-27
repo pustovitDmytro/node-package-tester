@@ -90,6 +90,21 @@ Config attribute description:
 | `legacyNodeVersion` | no |  ```string```  | Legacy NodeJS versions | `'>=10 <12'` |
 | `legacyMochaVersion` | no |  ```string```  | Mocha version, to run on `legacyNodeVersion` | `^6.0.0'` |
 
+### Modules
+
+List devDependencies, which need to be excluded from bundle and loaded with cjs. 
+
+Use simple list:
+```json
+ "modules": [ "cls-hooked", "code-chronicle", "eslint" ] 
+```
+
+Or specify version for legacy nodeJS:
+
+```json
+ "modules": [ "cls-hooked", { "name": "eslint", "legacy": "^7.0.0" } ] 
+```
+
 ### CI/CD
 
 Some common examples of ci/cd integration can be found in [examples folder](./examples/ci).

@@ -33,8 +33,11 @@ test('prepare: specify legacy versions', async function () {
     const packageJSON = await fs.readJSON(path.join(dir, 'package.json'));
 
     assert.deepOwnInclude(packageJSON, {
-        legacyDependencies    : { eslint: '^7.0.0' },
-        'node-package-tester' : { legacyNodeVersions: '8', nodeVersions: '14' }
+        'node-package-tester' : {
+            legacyNodeVersions : '8',
+            nodeVersions       : '14',
+            legacyDependencies : { eslint: '^7.0.0' }
+        }
     });
 
     assert.exists(packageJSON.devDependencies.eslint);
