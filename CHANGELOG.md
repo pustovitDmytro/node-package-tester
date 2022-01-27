@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/pustovitDmytro/node-package-tester/compare/v1.1.29...v1.2.0) (2022-01-27)
+
+
+### New
+
+* specify legacy versions from config ([8242626](https://github.com/pustovitDmytro/node-package-tester/commit/824262693d8aba169541421f479948fc1c75a057))
+
 ## [1.1.29](https://github.com/pustovitDmytro/node-package-tester/compare/v1.1.28...v1.1.29) (2022-01-25)
 
 
