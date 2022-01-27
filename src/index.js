@@ -16,7 +16,13 @@ const execAsync = promisify(exec);
 const rootDir = path.join(__dirname, '../');
 
 export default class Packer {
-    constructor({ dir, copy = [], modules = [], copyDefaultFiles } = {}) {
+    constructor({
+        dir,
+        copy = [],
+        modules = [],
+        copyDefaultFiles,
+        ...config
+    } = {}) {
         const packageJSONPath = path.resolve(process.cwd(), 'package.json');
 
         if (!dir) throw new Error("'dir' option is required");
@@ -34,6 +40,9 @@ export default class Packer {
         this.modules.push('mocha');
 
         this.ready = this._init(packageJSONPath);
+        this.legacyMochaVersion = config.legacyMochaVersion || '^6.0.0';
+        this.legacyNodeVersion = config.legacyNodeVersion || '>=10 <12';
+        this.supportedNodeVersion = config.supportedNodeVersion || '>=12 <=16';
     }
 
     async _init(packageJSONPath) {
@@ -62,12 +71,21 @@ export default class Packer {
     async prepare() {
         const nodeModulesPath = [ 'node_modules', this.packageInfo.name, 'lib' ];
         const devDependencies = this.packageInfo.peerDependencies || {};
+        const legacyDependencies = {};
 
         for (const dep of this.modules) {
-            devDependencies[dep] = this.packageInfo.devDependencies[dep];
+            if (typeof dep === 'string') {
+                devDependencies[dep] = this.packageInfo.devDependencies[dep];
+            } else {
+                const name = dep.name;
+
+                if (dep.legacy) legacyDependencies[name] = dep.legacy;
+
+                devDependencies[name] = this.packageInfo.devDependencies[name];
+            }
         }
 
-        devDependencies['mocha-legacy'] = 'npm:mocha@^6.0.0';
+        devDependencies['mocha-legacy'] = `npm:mocha@${this.legacyMochaVersion}`;
 
         const unixEntry = path.posix.join(...nodeModulesPath);
         const winEntry = path.win32.join(...nodeModulesPath);
@@ -94,9 +112,10 @@ export default class Packer {
             },
             devDependencies,
             'node-package-tester' : {
-                'legacyNodeVersions' : '>=10 <12',
-                'nodeVersions'       : '>=12 <=16'
-            }
+                'legacyNodeVersions' : this.legacyNodeVersion,
+                'nodeVersions'       : this.supportedNodeVersion
+            },
+            legacyDependencies
         };
 
         await fs.writeJSON(path.resolve(this.dir, 'package.json'), testConfig);

@@ -24,7 +24,8 @@
     "nodejs",
     "npt",
     "testing",
-    "version"
+    "version",
+    "mocha"
   ],
   "bin": {
     "npt": "lib/bin/npt.js"

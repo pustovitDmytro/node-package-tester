@@ -86,6 +86,9 @@ Config attribute description:
 | `copyDefaultFiles`    | no |  ```boolean```  | Copy default files. See [tests/init.js](tests/init.js) and [.mocharc.json](.mocharc.bundle.json)   | `false` |
 | `copy`    | no |  ```array```  | Files to copy into packed tests | `[]` |
 | `modules` | no |  ```array```  | Modules to copy into packed tests | `[]` |
+| `supportedNodeVersion` | no |  ```string```  | Supported NodeJS versions | `'>=12 <=16'` |
+| `legacyNodeVersion` | no |  ```string```  | Legacy NodeJS versions | `'>=10 <12'` |
+| `legacyMochaVersion` | no |  ```string```  | Mocha version, to run on `legacyNodeVersion` | `^6.0.0'` |
 
 ### CI/CD
 
