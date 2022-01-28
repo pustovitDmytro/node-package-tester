@@ -14,10 +14,10 @@ before(async function () {
 });
 
 test('prepare: specify legacy versions', async function () {
-    const dir = path.join(tmpFolder, 'prepare');
+    const dir = path.join(tmpFolder, 'prepare_1');
     const packer = new Packer({
         dir,
-        modules              : [ { name: 'eslint', legacy: '^7.0.0' } ],
+        modules              : [ { name: 'eslint', legacy: '^7.0.0' }, { name: 'uuid' }, 'node-package-tester' ],
         copyDefaultFiles     : true,
         legacyMochaVersion   : '5',
         legacyNodeVersion    : '8',
@@ -39,9 +39,33 @@ test('prepare: specify legacy versions', async function () {
             legacyDependencies : { eslint: '^7.0.0' }
         }
     });
-
-    assert.exists(packageJSON.devDependencies.eslint);
+    [ 'eslint', 'uuid', 'node-package-tester' ].forEach(dep => {
+        assert.exists(packageJSON.devDependencies[dep]);
+    });
     assert.notEqual(packageJSON.devDependencies.eslint, '^7.0.0');
+});
+
+
+test('prepare: copy files to npt location', async function () {
+    const dir = path.join(tmpFolder, 'prepare_2');
+    const packer = new Packer({
+        dir,
+        copyDefaultFiles : true,
+        copy             : [
+            [ 'src/bin/npt.js', 'bin.js' ],
+            [ 'unknown-path/1.js', 'unknown.js' ]
+        ]
+    });
+
+    await packer.ready;
+    await packer.packModule();
+    await packer.prepare();
+
+    for (const file of [ 'package.json', 'tests-init.js', '.mocharc.json', 'bin.js' ]) {
+        assert.isTrue(await fs.exists(path.join(dir, file)), `${file} exists`);
+    }
+
+    assert.isFalse(await fs.exists(path.join(dir, 'unknown.js')), 'unknown.js exists');
 });
 
 
