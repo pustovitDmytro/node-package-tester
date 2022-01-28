@@ -1,3 +1,10 @@
+## [1.3.1](https://github.com/pustovitDmytro/node-package-tester/compare/v1.3.0...v1.3.1) (2022-01-28)
+
+
+### Fix
+
+* drop redunant console.log ([b682ccd](https://github.com/pustovitDmytro/node-package-tester/commit/b682ccdad760cf24da4fd1660555ee33a8147976))
+
 # [1.3.0](https://github.com/pustovitDmytro/node-package-tester/compare/v1.2.0...v1.3.0) (2022-01-28)
 
 
