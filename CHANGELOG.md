@@ -1,3 +1,22 @@
+# [1.3.0](https://github.com/pustovitDmytro/node-package-tester/compare/v1.2.0...v1.3.0) (2022-01-28)
+
+
+### Chore
+
+* fixes some npm audit vulnerabilities (#62) ([4eac9fe](https://github.com/pustovitDmytro/node-package-tester/commit/4eac9fe44a897cfa51acfde98704970d6dd5b0cf)), closes [#62](https://github.com/pustovitDmytro/node-package-tester/issues/62)
+* increase coverage ([a4824b1](https://github.com/pustovitDmytro/node-package-tester/commit/a4824b186ac1f19afec03d615ac37eb4c53d4746))
+* Update devDependencies (non-major) (#48) ([50cadfe](https://github.com/pustovitDmytro/node-package-tester/commit/50cadfe764a208ae50febaad931fe06ea95af7d9)), closes [#48](https://github.com/pustovitDmytro/node-package-tester/issues/48)
+* Update devDependencies (non-major) (#49) ([0d58df2](https://github.com/pustovitDmytro/node-package-tester/commit/0d58df276d1ee85ddbd16233d25d70939d1d8fba)), closes [#49](https://github.com/pustovitDmytro/node-package-tester/issues/49)
+
+### New
+
+* specify legacy modules versions ([ca92495](https://github.com/pustovitDmytro/node-package-tester/commit/ca92495a127e4989ee73a0080ed726e6ba0b7a69))
+
+### Upgrade
+
+* Update dependency @babel/core to v7.16.12 (#52) ([0d1eabd](https://github.com/pustovitDmytro/node-package-tester/commit/0d1eabd20249e9128a0c5e962ce59f8fba89bfc9)), closes [#52](https://github.com/pustovitDmytro/node-package-tester/issues/52)
+* Update dependency rollup to v2.66.1 (#69) ([7009ace](https://github.com/pustovitDmytro/node-package-tester/commit/7009acede0a939b5311162ff0716474cee84f8c2)), closes [#69](https://github.com/pustovitDmytro/node-package-tester/issues/69)
+
 # [1.2.0](https://github.com/pustovitDmytro/node-package-tester/compare/v1.1.29...v1.2.0) (2022-01-27)
 
 
