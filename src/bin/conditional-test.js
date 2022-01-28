@@ -15,7 +15,6 @@ async function main() {
     const testCommand = getTestCommand(config, { platform, versions });
     const prepareCommands = getPrepareCommands(config, { platform, versions });
 
-    console.log('prepareCommands:', prepareCommands);
     for (const prepareCommand of prepareCommands) {
         execSync(prepareCommand);
     }
