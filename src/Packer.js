@@ -107,7 +107,7 @@ export default class Packer {
             },
             'dependencies' : {
                 [this.packageInfo.name] : path.basename(this.tarPath),
-                semver                  : packageInfo.dependencies.semver
+                'npt:semver'            : packageInfo.dependencies['npt:semver']
             },
             devDependencies,
             'node-package-tester' : {

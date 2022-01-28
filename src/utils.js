@@ -1,4 +1,4 @@
-import semver from 'semver';
+import semver from 'npt_semver';
 
 export function getTestCommand(config, { platform, versions }) {
     const nodeVersion = versions.node;
