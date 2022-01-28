@@ -1,3 +1,11 @@
+## [1.3.2](https://github.com/pustovitDmytro/node-package-tester/compare/v1.3.1...v1.3.2) (2022-01-28)
+
+
+### Fix
+
+* drop fs-extra from conditional-test.js ([16d9251](https://github.com/pustovitDmytro/node-package-tester/commit/16d92519fbc5d8107b47f6cd7df7656cb6ec59a6))
+* use inline scope for semver package ([38e5e5f](https://github.com/pustovitDmytro/node-package-tester/commit/38e5e5f552bbcf4a2ed45f87d8b09ac3507d7433))
+
 ## [1.3.1](https://github.com/pustovitDmytro/node-package-tester/compare/v1.3.0...v1.3.1) (2022-01-28)
 
 
