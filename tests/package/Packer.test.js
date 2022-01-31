@@ -4,6 +4,7 @@ import fs from 'fs-extra';
 import Packer from '../entry';
 import Test from '../Test';
 import { tmpFolder } from '../constants';
+import currentPackageJSON from '../../package.json';
 
 const factory = new Test();
 
@@ -66,6 +67,26 @@ test('prepare: copy files to npt location', async function () {
     }
 
     assert.isFalse(await fs.exists(path.join(dir, 'unknown.js')), 'unknown.js exists');
+});
+
+test('prepare: scoped dependenies [npt_semver]', async function () {
+    const dir = path.join(tmpFolder, 'prepare_3');
+    const packer = new Packer({
+        dir,
+        modules : []
+    });
+
+    await packer.ready;
+    await packer.packModule();
+    await packer.prepare();
+
+    assert.isTrue(await fs.exists(path.join(dir, 'package.json')), 'package.json exists');
+
+    const packageJSON = await fs.readJSON(path.join(dir, 'package.json'));
+
+    assert.deepOwnInclude(packageJSON.dependencies, {
+        'npt_semver' : currentPackageJSON.dependencies.npt_semver
+    });
 });
 
 
