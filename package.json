@@ -1,6 +1,6 @@
 {
   "name": "node-package-tester",
-  "version": "1.3.2",
+  "version": "1.3.3",
   "description": "tool for testing npm packages",
   "main": "./lib",
   "scripts": {

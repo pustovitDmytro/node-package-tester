@@ -1,3 +1,10 @@
+## [1.3.3](https://github.com/pustovitDmytro/node-package-tester/compare/v1.3.2...v1.3.3) (2022-01-31)
+
+
+### Fix
+
+* npt_semver nested dependency in generated package.json ([cdfc6c7](https://github.com/pustovitDmytro/node-package-tester/commit/cdfc6c77948744e3cad7ab84c1b2688f7f9832cc))
+
 ## [1.3.2](https://github.com/pustovitDmytro/node-package-tester/compare/v1.3.1...v1.3.2) (2022-01-28)
 
 
