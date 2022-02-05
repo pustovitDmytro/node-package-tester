@@ -1,3 +1,16 @@
+## [1.3.4](https://github.com/pustovitDmytro/node-package-tester/compare/v1.3.3...v1.3.4) (2022-02-05)
+
+
+### Chore
+
+* fixes some npm audit vulnerabilities (#70) ([95d1115](https://github.com/pustovitDmytro/node-package-tester/commit/95d111542d0bdccaf7a46d565801797c4a42fda0)), closes [#70](https://github.com/pustovitDmytro/node-package-tester/issues/70)
+* Lock file maintenance (#53) ([53833ae](https://github.com/pustovitDmytro/node-package-tester/commit/53833ae4ec1196e995ea8229c1d34a45d359ea1f)), closes [#53](https://github.com/pustovitDmytro/node-package-tester/issues/53)
+* lower nyc settings to match true negatives ([ea009e3](https://github.com/pustovitDmytro/node-package-tester/commit/ea009e3a11c61b9b2187093e64a16188320fcd08))
+
+### Upgrade
+
+* Update dependency rollup to v2.67.0 (#74) ([6ee3fea](https://github.com/pustovitDmytro/node-package-tester/commit/6ee3fea0402f4062a0cd81189ecd0ca78e159fed)), closes [#74](https://github.com/pustovitDmytro/node-package-tester/issues/74)
+
 ## [1.3.3](https://github.com/pustovitDmytro/node-package-tester/compare/v1.3.2...v1.3.3) (2022-01-31)
 
 
