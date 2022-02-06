@@ -1,3 +1,10 @@
+## [1.3.5](https://github.com/pustovitDmytro/node-package-tester/compare/v1.3.4...v1.3.5) (2022-02-06)
+
+
+### Upgrade
+
+* Update dependency @babel/core to v7.17.0 (#75) ([b69e313](https://github.com/pustovitDmytro/node-package-tester/commit/b69e313da7a5177abd78aab8e64f690ac6038a9c)), closes [#75](https://github.com/pustovitDmytro/node-package-tester/issues/75)
+
 ## [1.3.4](https://github.com/pustovitDmytro/node-package-tester/compare/v1.3.3...v1.3.4) (2022-02-05)
 
 
