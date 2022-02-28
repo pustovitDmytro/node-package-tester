@@ -1,3 +1,10 @@
+## [1.3.6](https://github.com/pustovitDmytro/node-package-tester/compare/v1.3.5...v1.3.6) (2022-02-28)
+
+
+### Docs
+
+* help Ukraine 🇺🇦 ([3301b28](https://github.com/pustovitDmytro/node-package-tester/commit/3301b2804c1878feefc333e0e90985b08dbd0567))
+
 ## [1.3.5](https://github.com/pustovitDmytro/node-package-tester/compare/v1.3.4...v1.3.5) (2022-02-06)
 
 
